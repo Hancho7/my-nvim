@@ -12,3 +12,15 @@ vim.keymap.set("n", "<Down>", ":resize -2<CR>", { desc = "Decrease window height
 vim.keymap.set("n", "<Esc>", ":nohlsearch<CR>", { desc = "Clear search highlights" })
 
 vim.keymap.set("i", "<leader>kj", "<Esc>", { desc = "Exit normal mode" })
+
+vim.keymap.set("n", "<leader>1", function()
+	vim.cmd("colorscheme catppuccin")
+end, { desc = "Catppuccin Theme" })
+
+vim.keymap.set("n", "<leader>2", function()
+	vim.cmd("colorscheme kanagawa")
+end, { desc = "Kanagawa Theme" })
+
+vim.keymap.set("n", "<leader>3", function()
+	vim.cmd("colorscheme rose-pine")
+end, { desc = "Rose Pine Theme" })
