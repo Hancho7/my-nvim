@@ -25,6 +25,8 @@ return {
 			"css",
 			"json",
 			"yaml",
+			"rust",
+			"toml",
 			"terraform",
 			"hcl",
 		},

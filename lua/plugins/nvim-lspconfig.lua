@@ -184,7 +184,30 @@ return {
 						},
 					},
 				},
+				-- rust_analyzer = {
+				-- 	settings = {
+				-- 		["rust-analyzer"] = {
+				-- 			cargo = {
+				-- 				allFeatures = true,
+				-- 				loadOutDirsFromCheck = true,
+				-- 				buildScripts = {
+				-- 					enable = true,
+				-- 				},
+				-- 			},
+				-- 			checkOnSave = {
+				-- 				command = "clippy",
+				-- 				extraArgs = {}, -- Remove any -Z flags
+				-- 			},
+				-- 			procMacro = {
+				-- 				enable = true,
+				-- 			},
+				-- 		},
+				-- 	},
+				-- },
 				ts_ls = {},
+				sqlls = {},
+				dockerls = {},
+				docker_compose_language_service = {},
 				gopls = {
 					settings = {
 						gopls = {
@@ -247,10 +270,17 @@ return {
 						end
 					end,
 				},
+				-- In the servers table, change:
 				terraformls = {
 					settings = {
 						terraform = {
 							timeout = "30s",
+						},
+						["terraform-ls"] = {
+							experimentalFeatures = {
+								validateOnSave = true,
+								prefillRequiredFields = true,
+							},
 						},
 					},
 				},
@@ -266,10 +296,17 @@ return {
 				"tailwindcss-language-server",
 				"jdtls",
 				"gopls",
+				-- "rust-analyzer",
+				"codelldb",
 				"gofumpt",
 				"goimports",
 				"terraform-ls",
 				"tflint",
+				"dockerfile-language-server",
+				"docker-compose-language-service",
+				"hadolint",
+				"sqlls",
+				"sql-formatter",
 			})
 			require("mason-tool-installer").setup({ ensure_installed = ensure_installed })
 

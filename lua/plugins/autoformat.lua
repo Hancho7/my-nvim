@@ -28,11 +28,15 @@ return {
 		end,
 		formatters_by_ft = {
 			lua = { "stylua" },
+			toml = { "taplo" },
 			-- You can use 'stop_after_first' to run the first available formatter from the list
 			javascript = { "prettierd", "prettier", stop_after_first = true },
 			go = { "goimports", "gofumpt" },
+			rust = { "rustfmt" },
 			terraform = { "terraform_fmt" },
 			tf = { "terraform_fmt" },
+			sql = { "pg_format" },
+			dockerfile = { "hadolint" },
 		},
 	},
 }
